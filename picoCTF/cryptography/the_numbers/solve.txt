@@ -1,0 +1,5 @@
+This is quite direct, you just need to open the image and each number will mean a letter in alphabetical order.
+
+After you decode all the numbers, you'll get the flag:
+
+picoCTF{thenumbersmason}

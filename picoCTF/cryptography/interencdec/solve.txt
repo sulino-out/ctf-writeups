@@ -1,0 +1,13 @@
+You get an file called enc_flag, which is double base64 encoded, so you just need to use the command:
+
+$ cat enc_flag | base64 -d
+b'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrX2kyMDRoa2o2fQ=='
+
+Take the other base64 encoded text inside the b'' and decode it again
+
+$ echo "d3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrX2kyMDRoa2o2fQ==" | base64 -d
+wpjvJAM{jhlzhy_k3jy9wa3k_i204hkj6}
+
+The output will be the flag encrypted with caesar cipher, decrypting it using dcode.fr, will give us the real flag:
+
+picoCTF{caesar_d3cr9pt3d_b204adc6}

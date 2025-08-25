@@ -1,0 +1,5 @@
+After logging in with a username different than Joe, you will note that you have a 'admin=False' cookie.
+
+Just turn it to 'True' and you will get the flag:
+
+picoCTF{th3_c0nsp1r4cy_l1v3s_d1c24fef}

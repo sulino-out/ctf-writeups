@@ -1,0 +1,9 @@
+Entering in the website https://jupiter.challenges.picoctf.org/problem/56830/, you will be prompted with the question 'Where are the robots?'
+
+Changing the URL to go to the robots.txt page, we note a weird disallow:
+
+- Disallow: /1bb4c.html
+
+After putting it in the URL, we get the flag:
+
+picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c} 

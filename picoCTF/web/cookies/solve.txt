@@ -1,0 +1,7 @@
+For this chall, you will need to bruteforce values for the cookie.
+
+After sending the right cookie (18), you will get the flag:
+
+$ curl -b "name=18" http://mercury.picoctf.net:27177/check
+
+Flag: picoCTF{3v3ry1_l0v3s_c00k135_064663be}

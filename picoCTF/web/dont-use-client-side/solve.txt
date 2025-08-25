@@ -1,0 +1,3 @@
+Just press <f12>, go to sources and See the password check and put it in order, you will get the flag:
+
+picoCTF{no_clients_plz_b706c5}

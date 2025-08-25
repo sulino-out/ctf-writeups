@@ -1,0 +1,11 @@
+Acess the the server using:
+
+$ nc verbal-sleep.picoctf.net 52518
+
+Then, crack all the hashes using crackstation.net website (a hash password's database).
+
+The first hash is '482c811da5d5b4bc6d497ffa98491e38' and its password is 'password123';
+The second hash is 'b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3' and its password is 'letmein';
+The third (and last) hash is '916e8c4f79b25028c9e467f1eb8eee6d6bbdff965f9928310ad30a8d88697745' and its password is 'qwerty098'
+
+After cracking all the last hash, you get the flag: picoCTF{UseStr0nG_h@shEs_&PaSswDs!_70ffa57c}

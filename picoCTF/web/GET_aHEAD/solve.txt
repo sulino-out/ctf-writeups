@@ -1,0 +1,7 @@
+After entering the webpage, you can press <f12> and see that the blue page is a GET request and the red page is a POST request, this with the tip get_aHEAD, we can just send a HEAD html request:
+
+$ curl -I http://mercury.picoctf.net:47967/index.php
+
+And we will get the flag:
+
+picoCTF{r3j3ct_th3_du4l1ty_cca66bd3}

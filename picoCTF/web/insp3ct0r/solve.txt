@@ -1,0 +1,5 @@
+The flag parts are hidden in the html, css and js files.
+
+To recover the entire flag just press <f12>, go to sources and check all the available codes and you will get the flag:
+
+picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?832b0699}

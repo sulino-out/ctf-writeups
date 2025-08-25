@@ -1,0 +1,36 @@
+Glossary:
+$ - Command on linux terminal
+~ - Python code
+
+This chall gives us the source code of the program running on 'nc verbal-sleep.picoctf.net 60565'
+
+When you first check the program, you note that it is basically encrypting the flag with the public key (using RSA algorithm).
+So, all we need to do is decrypt it by discovering the private key (p, q, d)
+
+To solve this chall we will run a program in python which we will make ourselves, by start we just need to make sure PyCryptodome is installed by running in our terminal:
+
+$ pip install pycryptodome
+
+At the start of our program, we need to call the functions we will use for decrypting the ciphertext:
+
+~ from Crypto.Util.number import long_to_bytes, inverse
+
+Whenever you run the program, N can be divided by two, so, starting writing our program in python, we can find:
+
+~ p = 2
+~ q = N // p # '//' is necessary for taking the integer value of the division
+
+'d' can be found by taking the modular inverse of 'e' (which is always 65573) mod Φ(n), with Φ(n) = (p-1)*(q-1).
+
+~ d = inverse(e, (p-1)*(q-1)) # Φ(n) = (p-1)*(q-1)
+
+After this having the private key got, we just need to decrypt de ciphertext by remembering that c^d ≡ m mod n, so:
+
+~ flag = pow(ciphertext, d, N)
+~ flag = long_to_bytes(flag).decode('utf-8')
+
+~ print(flag)
+
+This program is written in the 'solve.py' file and after running it, you get the flag:
+
+picoCTF{tw0_1$_pr!m3f81fef0a}

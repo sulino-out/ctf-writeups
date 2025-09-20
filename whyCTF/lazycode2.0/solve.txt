@@ -1,0 +1,53 @@
+When you download the file and decompress it, you will have an executable:
+
+lazy-code-2
+
+Executing it will print this in your terminal
+
+[+] Decrypting step 1/1000....
+[!] Yawn.... I'm tired... sleeping for 600 seconds
+
+So this program basically decripts the flag 1000x, but between each step it pauses for 10 minutes (the program would take 7 days to run completely)
+
+Let's analyse the executable using pwndbg:
+
+$ pwndbg lazy-code-2
+$ disas main
+
+After running this command, we can see the disassemble of the main function, which has an important thing:
+
+...
+0x000000000000126b <+182>:   call   0x1070 <sleep@plt>
+...
+
+This is basically an 'call sleep' instruction at the address 0x126b.
+
+The challenge os this chall is 'desactivating' this instruction.
+
+We can make it by:
+
+1. Making a backup file (in case it fails):
+
+$ cp lazy-code-2 lazy-code-2.bak
+
+2. Getting the instruction address in decimal:
+
+$ printf "%d\n" 0x126b
+4715
+
+3. Direct patching (changing) the instruction to NOP bytes (0x90): (Obs: NOP stands for no-operation)
+
+$ printf '\x90\x90\x90\x90\x90' | dd of=lazy-code-2 bs=1 seek=4715 count=5 conv=notrunc
+
+Explanation:
+
+printf '\x90\x90\x90\x90\x90' will print 5 times the NOP byte and it will be substitute the 5 call sleep instruction bytes of the lazy-code-2 file in the position 4715 (the instruction address)
+
+Obs: conv=notrunc specifies that the rest of the file is not patched.
+Obs: If you can't execute the new file, run:
+
+$ chmod +x lazy-code-2
+
+Finally, after running the patched program, it will print the flag:
+
+flag{b3fda416daebdef7a5d79deb07c43375}

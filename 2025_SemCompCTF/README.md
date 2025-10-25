@@ -4,7 +4,7 @@
 
 Este CTF foi realizado durante a **Semana da Computação** do Instituto de Ciências Matemáticas e de Computação (ICMC) da USP São Carlos, em 2025, em parceria com o grupo de extensão **Ganesh**. Os desafios ficaram disponíveis na plataforma [https://ganesh.icmc.usp.br/ctf/](https://ganesh.icmc.usp.br/ctf/) dos dias 20/10/25 às 14:00 até 23/10/25 às 23:59.  
 
-![Página de CTF do Ganesh](.img/pagina_inicial.png)
+![Página de CTF do Ganesh](img/pagina_inicial.png)
 
 ### Os desafios
 

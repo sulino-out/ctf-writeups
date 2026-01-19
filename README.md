@@ -5,9 +5,8 @@ Write-ups of CTF challenges I've worked on. Most of the events I participated we
 #### List of CTFs
 
 * pico CTF
-* why CTF 2025
 * SEMCOMP CTF 2025
 
 ## How it is organized
 
-The write-ups are organized in folders in the following pattern: `/year_ctfName/category/challengeName`, e.g `/2025_whyCTF/rev/lazycode2.0` or `ctfName/category/challengeName` in case its challenges are avaialble on the internet at any time, e.g `picoCTF/cryptography/hashcrack`
+The write-ups are organized in folders in the following pattern: `/year_ctfName/category/challengeName`, e.g `/2025_SemCompCTF/pwn/introducao_a_pwn` or `ctfName/category/challengeName` in case its challenges are avaialble on the internet at any time, e.g `picoCTF/cryptography/hashcrack`
